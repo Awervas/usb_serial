@@ -8,7 +8,7 @@ def work(dev):
         ser:serial.Serial
         with serial.Serial(dev, 115200, timeout=1) as ser:
             line = ser.read_until(expected=b'\xE2\x80\xA8')
-            print(line)
+            print(line.encode('utf-8'))
 
 
 
