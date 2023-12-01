@@ -5,9 +5,14 @@ import serial
 
 def work(dev):
     while True:
+        ser:serial.Serial
         with serial.Serial(dev, 115200, timeout=1) as ser:
-            line = ser.readline()
+            line = ser.read_until(expected=b'LS')
             print(line)
+
+
+
+
 
 if __name__ == '__main__':
 
