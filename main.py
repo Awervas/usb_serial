@@ -3,11 +3,10 @@ import sys
 
 import serial
 
-
 def work(dev):
     while True:
         with serial.Serial(dev, 115200, timeout=1) as ser:
-            line = ser.read(500)
+            line = ser.readline()
             print(line)
 
 if __name__ == '__main__':
