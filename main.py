@@ -1,4 +1,4 @@
-#!/home/szbaijie/usb_serial/env/bin/python3
+#!/home/log/usb_serial/env/bin/python3
 import sys
 
 import serial
